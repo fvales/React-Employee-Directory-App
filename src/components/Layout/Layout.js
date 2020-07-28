@@ -1,14 +1,14 @@
 import React from "react";
-import classes from "./Layout.css";
+import classes from "./Layout.module.css";
 import Header from "./Header/Header";
 
 const layout = (props) => {
-    return (<Aux>
-        <Header>Employee Directory</Header>
+    return (<>
+        <Header>Employee Directory App</Header>
         <main className={classes.content}>
             {props.children}
         </main>
-    </Aux>);
+    </>);
 }
 
 export default layout; 
