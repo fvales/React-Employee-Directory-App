@@ -9,8 +9,18 @@ class EmployeeDirectory extends Component {
         this.props.dispatch(handleEmployeesData());
     }
 
+    sortEmployeeList = (list) => {
+        // list.sort(function (a, b) { return a - b });
+        console.log (Array.isArray(list));
+    }
+
     render() {
-        return <EmployeeList employeeList={this.props.employees} />;
+        return (
+            <>
+                <button onClick={() => this.sortEmployeeList(this.props.employees)}>Sort Employee List</button>
+                <EmployeeList employeeList={this.props.employees} />
+            </>
+        );
     }
 }
 

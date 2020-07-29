@@ -5,6 +5,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import EmployeeDirectory from './containers/EmployeeDirectory/EmployeeDirectory';
 import { Route } from "react-router-dom"
 import Employee from './components/Employee/EmployeeDetail/Employee';
+import Resume from './components/Employee/EmployeeDetail/MoreInfo/Resume';
 
 function App() {
   return (
@@ -21,6 +22,11 @@ function App() {
         exact
         path="/employees/:employee_id"
         component={Employee}
+      />
+      <Route
+        exact
+        path="/employees/:employee_id/resume"
+        component={Resume}
       />
     </Layout>
   );

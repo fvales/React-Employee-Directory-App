@@ -9,19 +9,23 @@ const employeeList = (props) => {
             <ul className={classes.EmployeeListContainer}>
                 {
                     props.employeeList !== undefined ?
-                    Object.keys(props.employeeList).map(emp_id => (
-                        <li key={emp_id} className={`${classes.EmployeeCard} border`}>
-                            <Link to={`/employees/${emp_id}`} className={classes.EmployeeContainer}>
-                                <div className={classes.Avatar}>
-                                    <img src={props.employeeList[emp_id].avatarURL} alt={`avatar of ${props.employeeList[emp_id].firstName}`} />
-                                </div>
-                                <div className={classes.EmployeeInfo}>
-                                    <span className="name">{props.employeeList[emp_id].id}</span>
-                                    <span className="time">{props.employeeList[emp_id].firstName} {' '}  {props.employeeList[emp_id].lastName}</span>
-                                </div>
-                            </Link>
-                        </li>
-                    )) : <div>No records found</div>
+                        Object.keys(props.employeeList).map(emp_id => (
+                            <li key={emp_id} className={`${classes.EmployeeCard} border`}>
+                                <Link to={`/employees/${emp_id}`} className={classes.EmployeeContainer}>
+                                    <div className={classes.Avatar}>
+                                        <img src={props.employeeList[emp_id].avatarURL} alt={`avatar of ${props.employeeList[emp_id].firstName}`} />
+                                    </div>
+                                    <div className={classes.EmployeeInfo}>
+                                        <p>
+                                            <strong>Employee Id:</strong> {props.employeeList[emp_id].id}
+                                        </p>
+                                        <p>
+                                            <strong>Employee Name:</strong> {props.employeeList[emp_id].firstName} {' '}  {props.employeeList[emp_id].lastName}
+                                        </p>
+                                    </div>
+                                </Link>
+                            </li>
+                        )) : <div>No records found</div>
                 }
             </ul>
         </div>
