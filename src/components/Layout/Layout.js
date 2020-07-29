@@ -1,10 +1,12 @@
 import React from "react";
 import classes from "./Layout.module.css";
-import Header from "./Header/Header";
+import Navbar from 'react-bootstrap/Navbar';
 
 const layout = (props) => {
     return (<>
-        <Header>Employee Directory App</Header>
+        <Navbar bg="dark" variant="dark">
+            <Navbar.Brand>Employee Directory App</Navbar.Brand>
+        </Navbar>
         <main className={classes.content}>
             {props.children}
         </main>

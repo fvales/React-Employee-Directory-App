@@ -1,0 +1,48 @@
+.EmployeeListContainer {
+  padding: 20px;
+  background-color: #fff;
+  height: calc(100vh - 150px);
+  overflow-y: auto;
+}
+
+.EmployeeContainer,
+.EmployeeContainer:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.EmployeeCard {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.Avatar {
+  margin: 10px;
+  border: 3px solid rgba(150, 180, 150, 0.8);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  height: 73px;
+  width: 73px;
+  float: left;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75) inset;
+  -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75) inset;
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75) inset;
+}
+
+.Avatar img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.EmployeeInfo {
+  display: flex;
+  flex-direction: column;
+}

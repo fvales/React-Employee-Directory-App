@@ -1,0 +1,8 @@
+.EmployeeDetailsContainer {
+    padding: 20px;
+    border: 2px solid #fefefe;
+}
+
+.EmployeeDetailsContainer > ul li {
+    list-style: none;
+}
