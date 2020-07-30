@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import classes from "./Employee.module.css";
 import { Link } from "react-router-dom";
+import Toolbar from "../../Layout/Toolbar/Toolbar";
 class Employee extends Component {
 
     render() {
         return (
             <div>
-                <h3>Employee Details</h3>
+                <Toolbar title="Employee Details" historyObj={this.props.history}/>
                 <div>
                     <span>
                         <strong>Employee Id:</strong> {this.props.employee ? this.props.employee.id : '-'}

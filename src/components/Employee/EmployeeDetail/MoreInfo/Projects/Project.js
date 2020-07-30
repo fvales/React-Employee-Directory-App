@@ -4,7 +4,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 const project = (props) => {
     return (<div className="mt-5">
         {
-            props.projects.length > 0 ? <ListGroup>
+            props.projects ? <ListGroup>
                 {
                     Object.keys(props.projects).map((project_id, index) => {
                         return <ListGroup.Item key={index}>

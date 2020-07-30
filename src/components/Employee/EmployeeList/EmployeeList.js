@@ -1,11 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import classes from "./EmployeeList.module.css";
+import Toolbar from "../../Layout/Toolbar/Toolbar";
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
+import Button from 'react-bootstrap/Button';
 
 const employeeList = (props) => {
+    // console.log(props);
     return (
         <div>
-            <h3>List of all employees</h3>
+            <Toolbar title="List of all employees" historyObj={props.history} />
+            <div className={classes.FunctionToolbar}>
+                <Button variant="dark mr-4" onClick={() => props.sortEmployeeList("asc")}>Asc</Button>
+                <Button variant="dark mr-4" onClick={() => props.sortEmployeeList("desc")}>Desc</Button>
+                <InputGroup className="">
+                    <FormControl
+                        placeholder="Search employee by name"
+                        aria-label="Search employee by name"
+                        aria-describedby="basic-addon2"
+                    />
+                    <InputGroup.Append>
+                        <Button variant="outline-secondary" onClick={() => props.searchEmployeeList()}>Search</Button>
+                    </InputGroup.Append>
+                </InputGroup>
+            </div>
             <ul className={classes.EmployeeListContainer}>
                 {
                     props.employeeList !== undefined ?
@@ -32,4 +51,4 @@ const employeeList = (props) => {
     );
 }
 
-export default employeeList;
+export default withRouter(employeeList);

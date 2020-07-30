@@ -5,13 +5,15 @@ import Hobby from "../MoreInfo/Hobby/Hobby";
 import Info from "../MoreInfo/Info/Info";
 import Note from "../MoreInfo/Notes/Note";
 import Project from "../MoreInfo/Projects/Project";
+import Toolbar from "../../../Layout/Toolbar/Toolbar";
+import {withRouter} from "react-router-dom";
 
 const resume = (props) => {
     // let { props.location.employee } = props.location;
 
     return (
         <>
-            <h3>Resume of {props.location.employee?props.location.employee.firstName:'-'} {} {props.location.employee?props.location.employee.lastName:'-'}</h3>
+            <Toolbar title={`Resume of ${props.location.employee?props.location.employee.firstName:'-'} ${' '} ${props.location.employee?props.location.employee.lastName:'-'}`}  historyObj={props.history} />
             <Tabs defaultActiveKey="info" id="uncontrolled-tab" transition={false}>
                 <Tab eventKey="info" title="Info">
                     <Info info={props.location.employee?props.location.employee.info: []}/>
@@ -30,4 +32,4 @@ const resume = (props) => {
     );
 }
 
-export default resume;
+export default withRouter(resume);

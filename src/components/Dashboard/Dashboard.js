@@ -1,9 +1,10 @@
 import React from "react";
 import Card from 'react-bootstrap/Card'
 import classes from "./Dashboard.module.css";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import Toolbar from "../Layout/Toolbar/Toolbar";
 
-const dashboard = () => {
+const dashboard = (props) => {
     const cards = [
         {
             name: "Employee Directory",
@@ -12,7 +13,7 @@ const dashboard = () => {
     ];
     return (
         <>
-            <h3>Dashboard</h3>
+            <Toolbar title="Dashboard" historyObj={props.history} />
             <div className={classes.CardContainer}>
                 {cards.map(card => (
 
@@ -27,4 +28,4 @@ const dashboard = () => {
     );
 }
 
-export default dashboard;
+export default withRouter(dashboard);

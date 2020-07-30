@@ -1,8 +1,9 @@
 .EmployeeListContainer {
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
   background-color: #fff;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 230px);
   overflow-y: auto;
+  margin-top: 20px;
 }
 
 .EmployeeContainer,
@@ -50,4 +51,12 @@
 .EmployeeInfo {
   display: flex;
   flex-direction: column;
+}
+
+.FunctionToolbar {
+  display: flex;
+}
+
+.FunctionToolbar button {
+  flex-basis: 20%;
 }

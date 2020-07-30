@@ -3,6 +3,7 @@ import classes from "./Layout.module.css";
 import Navbar from 'react-bootstrap/Navbar';
 
 const layout = (props) => {
+    
     return (<>
         <Navbar bg="dark" variant="dark">
             <Navbar.Brand>Employee Directory App</Navbar.Brand>
