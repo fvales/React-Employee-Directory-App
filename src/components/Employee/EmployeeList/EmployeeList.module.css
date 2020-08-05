@@ -1,9 +1,7 @@
 .EmployeeListContainer {
-  padding: 0px 20px 20px 20px;
-  background-color: #fff;
-  height: calc(100vh - 230px);
+  height: calc(100vh - 130px);
   overflow-y: auto;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .EmployeeContainer,
@@ -16,15 +14,17 @@
 .EmployeeCard {
   list-style-type: none;
   text-decoration: none;
-  padding: 10px 10px;
-  border-radius: 10px;
-  margin: 20px;
-  display: flex;
-  flex-direction: row;
+  padding: 25px 20px 25px 40px;
+  font-size: 18px;
+  border-bottom: 1px solid #dee2e6;;
+}
+
+.backgroundWhite {
+  background-color: #fff;
 }
 
 .EmployeeCard:hover {
-  background-color: #f5f5f5;
+  background-color: #d3d3d3;
 }
 
 .Avatar {
@@ -49,8 +49,8 @@
 }
 
 .EmployeeInfo {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .FunctionToolbar {
@@ -59,4 +59,11 @@
 
 .FunctionToolbar button {
   flex-basis: 20%;
+}
+
+.EmployeeListHeader {
+  padding: 10px 20px 10px 40px;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
 }

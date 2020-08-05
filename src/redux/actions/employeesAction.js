@@ -1,4 +1,4 @@
-import { _getEmployees } from "../../Utils/_DATA";
+import { _getEmployees } from "../../Utils/Service";
 export const RECEIVE_EMPLOYEES = "RECEIVE_EMPLOYEES";
 export const SORT_EMPLOYEES_ASCENDING = "SORT_EMPLOYEES_ASCENDING";
 export const SORT_EMPLOYEES_DESCENDING = "SORT_EMPLOYEES_DESCENDING";

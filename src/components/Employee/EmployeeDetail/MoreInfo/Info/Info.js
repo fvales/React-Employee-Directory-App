@@ -9,7 +9,7 @@ const info = (props) => {
                     props.info.map((hobby, index) =>
                         <ListGroup.Item key={index}>{hobby}</ListGroup.Item>)
                 }
-            </ListGroup> : <div>No data to show</div>
+            </ListGroup> : <div className="DataNotFound">No data to show</div>
         }
     </div>);
 }

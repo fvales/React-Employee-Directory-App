@@ -1,5 +1,15 @@
 .content {
-    width: 100%;
+    margin: 0 20px 0 20px;
+    background-color: #f3f3f3;
     height: 100%;
-    padding: 20px;
+}
+
+.Container {
+    height: 100vh;
+    background: linear-gradient(rgba(2,99,162,1.0), rgba(51,156,222,1.0));
+}
+
+.Strip {
+    height: 5px;
+    background-color: darkblue;
 }

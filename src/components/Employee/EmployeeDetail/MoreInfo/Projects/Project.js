@@ -21,7 +21,7 @@ const project = (props) => {
                         </ListGroup.Item>
                     })
                 }
-            </ListGroup> : <div>No data to show</div>
+            </ListGroup> : <div className="DataNotFound">No data to show</div>
         }
     </div>);
 }

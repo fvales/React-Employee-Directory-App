@@ -5,6 +5,16 @@ import { handleEmployeesData } from "../../redux/actions/employeesAction";
 import * as employeesActions from "../../redux/actions/employeesAction";
 class EmployeeDirectory extends Component {
 
+    state = {
+        searchValue: ''
+    };
+
+    changeSearchInput = (value) => {
+        this.setState({
+            searchValue: value
+        });
+    }
+
     componentDidMount() {
         this.props.dispatch(handleEmployeesData());
     }
@@ -21,9 +31,9 @@ class EmployeeDirectory extends Component {
         }
     }
 
-    searchEmployeeList = (name) => {
-        if (name !== '') {
-            this.props.dispatch(employeesActions.searchEmployeesByName(name));
+    searchEmployeeList = () => {
+        if (this.state.searchValue !== '') {
+            this.props.dispatch(employeesActions.searchEmployeesByName(this.state.searchValue));
         } else {
             this.props.dispatch(handleEmployeesData());
         }
@@ -32,7 +42,7 @@ class EmployeeDirectory extends Component {
     render() {
         return (
             <>
-                <EmployeeList employeeList={this.props.employees} sortEmployeeList={this.sortEmployeeList} searchEmployeeList={this.searchEmployeeList} />
+                <EmployeeList employeeList={this.props.employees} sortEmployeeList={this.sortEmployeeList} searchEmployeeList={this.searchEmployeeList} changeSearchInput={this.changeSearchInput}/>
             </>
         );
     }

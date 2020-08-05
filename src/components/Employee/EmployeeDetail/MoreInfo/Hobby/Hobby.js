@@ -1,5 +1,6 @@
 import React from "react";
 import ListGroup from 'react-bootstrap/ListGroup';
+import classes from "./Hobby.module.css";
 
 const hobby = (props) => {
     return (<div className="mt-5">
@@ -9,7 +10,7 @@ const hobby = (props) => {
                     props.hobbies.map((hobby, index) =>
                         <ListGroup.Item key={index}>{hobby}</ListGroup.Item>)
                 }
-            </ListGroup> : <div>No data to show</div>
+            </ListGroup> : <div className="DataNotFound">No data to show</div>
         }
     </div>);
 }

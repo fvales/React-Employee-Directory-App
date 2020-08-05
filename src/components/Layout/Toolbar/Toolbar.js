@@ -9,11 +9,11 @@ const toolbar = (props) => {
     }
 
     return (
-        <div className={`${classes.ToolbarContainer} mb-3`}>
+        <div className={`${classes.ToolbarContainer} text-center`}>
             {
-                props.historyObj.location.pathname !== '/'?<Button variant="link" onClick={goToPrevPage}>&#x2B05;&nbsp;Back</Button>:null
+                props.historyObj.location.pathname !== '/'?<Button className="p-0 float-left" variant="link" onClick={goToPrevPage}><i className="fa fa-chevron-left"></i></Button>:null
             }
-            <h3>{props.title}</h3>
+            <span>{props.title}</span>
         </div>
     );
 }

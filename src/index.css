@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Arial Narrow', sans-serif !important;
   padding: 0;
 }
 
@@ -11,4 +11,9 @@ ul, li, p {
 
 li {
   list-style: none;
+}
+
+.DataNotFound {
+  background: white;
+  padding: 20px;
 }

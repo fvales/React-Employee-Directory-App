@@ -7,52 +7,56 @@ class Employee extends Component {
 
     render() {
         return (
-            <div>
-                <Toolbar title="Employee Details" historyObj={this.props.history}/>
-                <div>
-                    <span>
-                        <strong>Employee Id:</strong> {this.props.employee ? this.props.employee.id : '-'}
-                    </span>
-                    <span className="float-right">
-                        <Link to={
-                            {
-                                pathname: "/employees/".concat(this.props.employee?this.props.employee.id:'-').concat("/resume") ,
-                                employee: this.props.employee
-                            }
-                        }>Flip to resume</Link>
-                    </span>
-                </div>
-                <div className={classes.EmployeeDetailsContainer}>
-                    <div className={classes.Avatar}>
-                        <img src={this.props.employee ? this.props.employee.avatarURL : ''} alt={`avatar of ${this.props.employee ? this.props.employee.firstName : '-'}`} />
+            <>
+                <Toolbar title="Employee Details" historyObj={this.props.history} />
+                <div className={classes.EmployeeInfoContainer}>
+                    <div>
+                        <span>
+                            <strong>Employee Id:</strong> {this.props.employee ? this.props.employee.id : '-'}
+                        </span>
+                        <span className="float-right">
+                            <Link to={
+                                {
+                                    pathname: "/employees/".concat(this.props.employee ? this.props.employee.id : '-').concat("/resume"),
+                                    employee: this.props.employee
+                                }
+                            }>Flip to resume</Link>
+                        </span>
                     </div>
-                    <div className={classes.EmployeeInfoContainer}>
-                        <ul>
-                            <li>
-                                <strong>First Name:</strong> {this.props.employee ? this.props.employee.firstName : '-'}
-                            </li>
-                            <li>
-                                <strong>Last Name:</strong> {this.props.employee ? this.props.employee.lastName : '-'}
-                            </li>
-                            <li>
-                                <strong>Phone:</strong> {this.props.employee ? this.props.employee.phone : '-'}
-                            </li>
-                            <li>
-                                <strong>Address:</strong> {this.props.employee ? this.props.employee.address : '-'}
-                            </li>
-                            <li>
-                                <strong>Postal Code:</strong> {this.props.employee ? this.props.employee.postalCode : '-'}
-                            </li>
-                            <li>
-                                <strong>City:</strong> {this.props.employee ? this.props.employee.city : '-'}
-                            </li>
-                            <li>
-                                <strong>Country:</strong> {this.props.employee ? this.props.employee.country : '-'}
-                            </li>
-                        </ul>
+                    <hr/>
+                    <div className={classes.EmployeeDetailsContainer}>
+                        <div className={classes.Avatar}>
+                            <img src={this.props.employee ? this.props.employee.avatarURL : ''} alt={`avatar of ${this.props.employee ? this.props.employee.firstName : '-'}`} />
+                        </div>
+                        <div className={classes.EmployeeContainer}>
+                            <ul>
+                                <li>
+                                    <strong>First Name:</strong> {this.props.employee ? this.props.employee.firstName : '-'}
+                                </li>
+                                <li>
+                                    <strong>Last Name:</strong> {this.props.employee ? this.props.employee.lastName : '-'}
+                                </li>
+                                <li>
+                                    <strong>Phone:</strong> {this.props.employee ? this.props.employee.phone : '-'}
+                                </li>
+                                <li>
+                                    <strong>Address:</strong> {this.props.employee ? this.props.employee.address : '-'}
+                                </li>
+                                <li>
+                                    <strong>Postal Code:</strong> {this.props.employee ? this.props.employee.postalCode : '-'}
+                                </li>
+                                <li>
+                                    <strong>City:</strong> {this.props.employee ? this.props.employee.city : '-'}
+                                </li>
+                                <li>
+                                    <strong>Country:</strong> {this.props.employee ? this.props.employee.country : '-'}
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+                    <hr/>
                 </div>
-            </div>
+            </>
         );
     }
 }

@@ -7,9 +7,13 @@ import Toolbar from "../Layout/Toolbar/Toolbar";
 const dashboard = (props) => {
     const cards = [
         {
-            name: "Employee Directory",
+            name: "Display not found",
+            route: "/"
+        },
+        {
+            name: "Show Employee List",
             route: "/Employee_Directory"
-        }
+        },
     ];
     return (
         <>
@@ -19,7 +23,7 @@ const dashboard = (props) => {
 
                     <Card className={classes.card} key={card.name}>
                         <Link to={card.route} className={classes.CardLink}>
-                            <Card.Body>{card.name}</Card.Body>
+                            <Card.Body className="p-2">{card.name}</Card.Body>
                         </Link>
                     </Card>
                 ))}
